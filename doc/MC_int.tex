@@ -1,0 +1,15 @@
+\documentclass{amsart}
+\usepackage[utf8]{inputenc}
+\title{Monte Carlo Integration}
+\author{Erik Boström}
+\begin{document}
+\maketitle
+Let $\Omega\subset \mathbb{R}^n$, $n>0$. Monte--Carlo integration (MCI) approximates the volume of a subset $\Omega_p\subset \Omega$, i.e.,\ an integral of some function over $\Omega$. Let $X=\{x_i\}_{i=1}^N$ be a sequence of randomly distributed points (usually uniform, but not necessary) in $\Omega$, then MCI approximates $\text{vol}(\Omega_p)$ as $\text{vol}(\Omega)N_p/N=\text{vol}(\Omega)|X_p|/|X|$, where $X_p=\{x\in X\,:\,x\in \Omega_p\}$. 
+
+More explicitly, for $f:\Omega\mapsto \mathbb{R}$:
+$$\frac{1}{\text{vol}(\Omega)}\int_{\Omega}f(x)\,\mathrm{d}V\approx \langle f \rangle_X\pm \sqrt{\frac{\text{Var}_X(f)}{N}}$$
+where $\langle f \rangle_X:=\frac{1}{N}\sum_{i=1}^Nf(x_i)$ is the mean and $\text{Var}_X(f):=\langle f^2\rangle_X - \langle f\rangle_X^2$ the variance. 
+
+Using Monte Carlo integration can be rather expensive and is not to prefer for simple integrals where e.g.\ the Simson rule is simple and fast. It is to prefer for higher dimensions and complicated integrals where other alternatives are hard or impossible to use. 
+
+\end{document}

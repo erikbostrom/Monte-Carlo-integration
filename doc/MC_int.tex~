@@ -1,0 +1,11 @@
+\documentclass{amsart}
+\title{Monte Carlo Integration}
+\begin{document}
+\maketitle
+Let $\Omega\subset \mathbb{R}^n$. Monte--Carlo integration (MCI) approximates the volume of a subset $\Omega_p\subset \Omega$, i.e.,\ an integral of some function over $\Omega$. Let $X=\{x_i\}_{i=1}^N$ be a sequence of uniformly randomly distributed points in $\Omega$, then MCI approximates $\text{vol}(\Omega_p)$ as $\text{vol}(\Omega)N_p/N=\text{vol}(\Omega)|X|/|X_p|$, where $X_p=\{x\in X\,:\,x\in \Omega_p\}$. 
+
+More explicitly, for $f:\Omega\mapsto \mathbb{R}$:
+$$\int_{\Omega}f(x)\,\mathrm{d}V\approx \text{vol}(\Omega)\langle f \rangle$$
+
+
+\end{document}
